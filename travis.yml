@@ -1,5 +1,16 @@
+language: ruby
+
 sudo: false
 
+addons:
+  apt:
+    packages:
+    - bc
+    - libc6:i386
+    - libstdc++6:i386
+    - zlib1g:i386
+    - gcc-multilib
+    
 ## Cache composer bits
 cache:
   bundler: true
