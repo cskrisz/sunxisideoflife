@@ -1,0 +1,19 @@
+sudo: false
+
+## Cache composer bits
+cache:
+  bundler: true
+  directories:
+    - $HOME/.buildroot-ccache
+
+before_script:
+  - wget https://buildroot.org/downloads/buildroot-2016.05.tar.gz
+  - tar xf buildroot-2016.05.tar.gz
+  - cp sunxi.config buildroot-2016.05/.config
+  - cd buildroot-2016.05
+
+script:
+  - make
+  
+notifications:
+  email: false
