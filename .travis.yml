@@ -22,7 +22,7 @@ before_script:
   - cd buildroot-2016.05
 
 script:
-  - make V=w
+  - make > log.txt
   
 notifications:
   email: false
