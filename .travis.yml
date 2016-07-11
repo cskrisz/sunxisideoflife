@@ -21,6 +21,7 @@ before_script:
   - cp sunxi.config buildroot-2016.05/.config
   - cd buildroot-2016.05
 
+#
 script:
   - make > log.txt
   
