@@ -7,5 +7,5 @@ fi
 
 if [ ! -f sunxi-3.4.zip ]; then
     wget https://github.com/linux-sunxi/linux-sunxi/archive/sunxi-3.4.zip --no-check-certificate
-    tar xf sunxi-3.4.zip
+    unzip sunxi-3.4.zip
 fi
