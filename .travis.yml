@@ -14,19 +14,16 @@ cache:
   bundler: true
   directories:
     - $HOME/.buildroot-ccache
-    - $TRAVIS_BUILD_DIR/buildroot-2016.05/output/build
+    - $TRAVIS_BUILD_DIR
 
 before_script:
   - wget https://buildroot.org/downloads/buildroot-2016.05.tar.gz --no-check-certificate
-  - tar xf buildroot-2016.05.tar.gz
+  - tar xf --keep-old-files buildroot-2016.05.tar.gz
   - cp sunxi.config buildroot-2016.05/.config
   - cd buildroot-2016.05
 
 script:
-  - pwd
-  - echo $TRAVIS_BUILD_DIR
-  - echo $HOME
-##  - make > log.txt
+  - make > log.txt
   
 notifications:
   email: false
