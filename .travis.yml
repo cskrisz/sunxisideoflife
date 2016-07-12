@@ -18,7 +18,7 @@ cache:
 
 before_script:
   - bash before.sh
-  - cp buildroot-bananian-sunxi-kernel.config buildroot-2016.05/.config
+  - cp bbuildroot-bananapi-sunxi-kernel.config buildroot-2016.05/.config
   - cd buildroot-2016.05
 
 script:
