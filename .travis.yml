@@ -14,6 +14,7 @@ cache:
   bundler: true
   directories:
     - $HOME/.buildroot-ccache
+    - $TRAVIS_BUILD_DIR/buildroot-2016.05/output/build
 
 before_script:
   - wget https://buildroot.org/downloads/buildroot-2016.05.tar.gz --no-check-certificate
