@@ -18,7 +18,7 @@ cache:
 
 before_script:
   - wget https://buildroot.org/downloads/buildroot-2016.05.tar.gz --no-check-certificate
-  - tar xf --keep-old-files buildroot-2016.05.tar.gz
+  - tar xf buildroot-2016.05.tar.gz --keep-old-files
   - cp sunxi.config buildroot-2016.05/.config
   - cd buildroot-2016.05
 
