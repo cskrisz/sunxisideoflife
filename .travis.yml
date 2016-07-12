@@ -18,8 +18,10 @@ cache:
 
 before_script:
   - wget https://buildroot.org/downloads/buildroot-2016.05.tar.gz --no-check-certificate
+  - wget https://github.com/linux-sunxi/linux-sunxi/archive/sunxi-3.4.zip --no-check-certificate
   - tar xf buildroot-2016.05.tar.gz --keep-old-files
-  - cp sunxi.config buildroot-2016.05/.config
+  - tar xf sunxi-3.4.zip
+  - cp buildroot-bananian-sunxi-kernel.config buildroot-2016.05/.config
   - cd buildroot-2016.05
 
 script:
