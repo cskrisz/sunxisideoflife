@@ -24,5 +24,8 @@ before_script:
 script:
   - make >> log.txt
   
+after_script:
+  - tail -n 50 log.txt
+  
 notifications:
   email: false
